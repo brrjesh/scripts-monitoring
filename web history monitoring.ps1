@@ -1,4 +1,4 @@
-﻿while(Test-Path "$env:SystemDrive"){
+﻿while($true){
 $exportpath = "$env:SystemDrive"+"\report\"+$env:USERNAME+"\browsing-"+$env:USERNAME+"-"+(get-date).ToString("dd-MMM-yy")+".csv"
 Function GetCurrentIEURL
 {

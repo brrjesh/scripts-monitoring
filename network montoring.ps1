@@ -111,7 +111,7 @@ $fileExistenceCheck= Test-Path $path
 if(!($fileExistenceCheck -eq "true"))
 {
 New-Item $path -ItemType file -Force
-""|select Date,User,HostName,Private,PersonalWifiNetwork,OfficeNetwork,NoNetwork|export-csv $path -NoTypeInformation
+""|select Date,User,HostName,Private,OfficeNetwork,NoNetwork|export-csv $path -NoTypeInformation
 $csv = import-csv $path
 [int]$csv.NoNetwork+=1
 $csv.Date= (get-date).tostring("dd-MMM-yy")

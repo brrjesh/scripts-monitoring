@@ -1,4 +1,5 @@
-﻿$csvpath = "C:\Users\brajesh.d\Desktop\scripts monitoring\06-Apr-17-brajesh.d.csv"
+﻿#path of application monitoring csv output
+$csvpath = "C:\Users\brajesh.d\Desktop\scripts monitoring\06-Apr-17-brajesh.d.csv"
 if (Test-Path $csvpath)
 {
 $a=(Import-Csv $csvpath).CurrentApplication
